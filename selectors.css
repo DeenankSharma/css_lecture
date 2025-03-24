@@ -1,0 +1,81 @@
+/* element selectors */
+h1 {
+  color: blue;
+  font-size: 32px;
+}
+p {
+  color: #333333;
+  font-size: 16px;
+}
+
+/* class selectors */
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.highlight {
+  background-color: yellow;
+  font-weight: bold;
+}
+
+/* id selectors */
+
+#header {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* descendant selectors */
+
+.article p {
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* child selectors */
+
+ul > li {
+  list-style-type: square;
+  margin-bottom: 10px;
+}
+
+/* adjacent sibling selectors */
+
+h2 + p {
+  font-weight: bold;
+  border-top: 1px dotted #999;
+}
+
+/* attribute selectors */
+
+a[href^="https"] {
+  color: green;
+  text-decoration: none;
+}
+
+input[type="text"] {
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  padding: 8px;
+}
+
+/* pseudo-classes */
+
+a:hover {
+  color: red;
+  text-decoration: underline;
+}
+
+li:first-child {
+  font-weight: bold;
+}
+
+p::first-letter {
+  font-size: 150%;
+  font-weight: bold;
+}
+
+
+

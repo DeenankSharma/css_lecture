@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selector Specificity Demonstration</title>
+    <link rel="stylesheet" href="selector_hierarchy.css">
+</head>
+<body>
+    <h1>Understanding CSS Selector Specificity</h1>
+    
+    <div class="container">
+        <h2>What is Specificity?</h2>
+        <p>Specificity is how browsers decide which CSS property values are the most relevant to an element and will be applied. It's calculated based on the matching selectors in your CSS rules.</p>
+        
+        <h2>Specificity Hierarchy</h2>
+        <p>Specificity is calculated as a four-part value: inline styles, IDs, classes/attributes, and elements:</p>
+        <ul>
+            <li><strong>Inline styles</strong>: Added directly to the element (1,0,0,0)</li>
+            <li><strong>IDs</strong>: Each ID selector (#id) (0,1,0,0)</li>
+            <li><strong>Classes, attributes, pseudo-classes</strong>: (.class, [attr], :hover) (0,0,1,0)</li>
+            <li><strong>Elements, pseudo-elements</strong>: (div, ::before) (0,0,0,1)</li>
+        </ul>
+    </div>
+    
+    <h2>Live Examples</h2>
+    
+    <div class="example-box">
+        <p>This paragraph uses the type selector <code>p { color: red; }</code> (Specificity: 0,0,0,1)</p>
+        
+        <p class="text">This paragraph uses the class selector <code>.text { color: blue; }</code> (Specificity: 0,0,1,0)</p>
+        
+        <p id="unique">This paragraph uses the ID selector <code>#unique { color: green; }</code> (Specificity: 0,1,0,0)</p>
+        
+        <p class="text highlight">This paragraph uses multiple classes <code>.text.highlight { color: purple; }</code> (Specificity: 0,0,2,0)</p>
+        
+        <p class="text" id="unique2">This paragraph has both class and ID. The ID wins with <code>#unique2</code> having higher specificity.</p>
+        
+        <div>
+            <p>This paragraph is styled with <code>div p { background-color: #f0f0f0; }</code> (Specificity: 0,0,0,2)</p>
+            
+            <p class="text">This paragraph is inside a div and has class "text", multiple rules apply based on specificity.</p>
+        </div>
+        
+        <p class="text override">This paragraph has <code>.override { color: darkred !important; }</code> which overrides all other color rules due to !important.</p>
+        
+        <p style="color: violet;">This paragraph uses inline style: <code>style="color: violet;"</code> (Specificity: 1,0,0,0)</p>
+    </div>
+    
+    <h2>Specificity Calculator</h2>
+    
+    <div class="specificity-calculator">
+        <div class="specificity-row header">
+            <div class="selector">Selector</div>
+            <div class="calculation">Calculation</div>
+            <div class="result">Specificity</div>
+        </div>
+        
+        <div class="specificity-row">
+            <div class="selector">p</div>
+            <div class="calculation">0,0,0,1</div>
+            <div class="result">1</div>
+        </div>
+        
+        <div class="specificity-row">
+            <div class="selector">.text</div>
+            <div class="calculation">0,0,1,0</div>
+            <div class="result">10</div>
+        </div>
+        
+        <div class="specificity-row">
+            <div class="selector">#unique</div>
+            <div class="calculation">0,1,0,0</div>
+            <div class="result">100</div>
+        </div>
+        
+        <div class="specificity-row">
+            <div class="selector">.text.highlight</div>
+            <div class="calculation">0,0,2,0</div>
+            <div class="result">20</div>
+        </div>
+        
+        <div class="specificity-row">
+            <div class="selector">p.text</div>
+            <div class="calculation">0,0,1,1</div>
+            <div class="result">11</div>
+        </div>
+        
+        <div class="specificity-row">
+            <div class="selector">div p</div>
+            <div class="calculation">0,0,0,2</div>
+            <div class="result">2</div>
+        </div>
+        
+        <div class="specificity-row">
+            <div class="selector">div.container p.text</div>
+            <div class="calculation">0,0,2,2</div>
+            <div class="result">22</div>
+        </div>
+        
+        <div class="specificity-row">
+            <div class="selector">inline style</div>
+            <div class="calculation">1,0,0,0</div>
+            <div class="result">1000</div>
+        </div>
+        
+        <div class="specificity-row">
+            <div class="selector">.override !important</div>
+            <div class="calculation">Overrides all</div>
+            <div class="result">∞</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.box {
+  width: 200px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+}
+
+.color-transition {
+  transition: background-color 0.5s ease;
+}
+
+.color-transition:hover {
+  background-color: #e74c3c;
+}
+
+.size-transition {
+  transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+}
+
+.size-transition:hover {
+  width: 250px;
+  height: 150px;
+}
+
+.transform-transition {
+  transition: transform 0.5s ease;
+}
+
+.transform-transition:hover {
+  transform: rotate(45deg) scale(1.2); 
+  /* read about transform functions here: https://developer.mozilla.org/en-US/docs/Web/CSS/transform; */
+}
+
+.multiple-transition {
+  transition: background-color 0.5s ease, transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.multiple-transition:hover {
+  background-color: #2ecc71;
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}

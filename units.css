@@ -1,0 +1,183 @@
+/* Basic page styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  /* Setting a base font size for the document */
+  font-size: 16px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+section {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+h2 {
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+}
+
+.unit-example {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-left: 4px solid #3498db;
+}
+
+/* ==============================
+ ABSOLUTE UNITS
+ ============================== */
+/* Absolute units have fixed sizes that don't change based on context */
+
+/* Pixels (px) - Most common absolute unit, 1px = 1 device pixel on standard resolution */
+.px-example {
+  font-size: 18px;
+  width: 400px;
+}
+
+/* Points (pt) - Traditionally used in print, 1pt = 1/72 of an inch */
+.pt-example {
+  font-size: 14pt;
+  width: 300pt;
+}
+
+/* Inches (in) - Physical measurement */
+.in-example {
+  font-size: 0.2in;
+  width: 4in;
+}
+
+/* Centimeters (cm) - Physical measurement */
+.cm-example {
+  font-size: 0.5cm;
+  width: 10cm;
+}
+
+/* Millimeters (mm) - Physical measurement */
+.mm-example {
+  font-size: 5mm;
+  width: 100mm;
+}
+
+/* ==============================
+ RELATIVE UNITS
+ ============================== */
+/* Relative units scale based on other elements or the viewport */
+
+/* em - Relative to the font-size of the parent element */
+.em-example {
+  font-size: 1.5em;  /* 1.5 times the parent's font size */
+  width: 20em;       /* 20 times this element's font size */
+}
+
+/* rem - Relative to the font-size of the root element (html) */
+.rem-example {
+  font-size: 1.5rem;  /* 1.5 times the root font size */
+  width: 20rem;       /* 20 times the root font size */
+}
+
+/* Percentage (%) - Relative to the parent element's size */
+.percent-example {
+  font-size: 150%;  /* 150% of the parent's font size */
+  width: 75%;       /* 75% of the parent's width */
+}
+
+/* Viewport Width (vw) - Relative to 1% of viewport width */
+.vw-example {
+  font-size: 2vw;   /* 2% of viewport width */
+  width: 50vw;      /* 50% of viewport width */
+}
+
+/* Viewport Height (vh) - Relative to 1% of viewport height */
+.vh-example {
+  font-size: 2vh;   /* 2% of viewport height */
+  width: 50vh;      /* 50% of viewport height */
+  height: 10vh;     /* 10% of viewport height */
+  background-color: #e0f7fa;
+}
+
+/* ==============================
+ NESTED EXAMPLES
+ ============================== */
+/* Demonstration of how em compounds in nested elements */
+
+.parent {
+  font-size: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #f0f0f0;
+}
+
+.child {
+  /* 1.5em × 20px = 30px */
+  font-size: 1.5em;
+  border: 1px solid #999;
+  padding: 10px;
+  margin: 10px;
+  background-color: #e0e0e0;
+}
+
+.grandchild {
+  /* 1.5em × 30px = 45px */
+  font-size: 1.5em;
+  border: 1px solid #666;
+  padding: 10px;
+  margin: 10px;
+  background-color: #d0d0d0;
+}
+
+/* ==============================
+ RESPONSIVE DESIGN EXAMPLE
+ ============================== */
+/* Combining units for responsive design */
+
+.responsive-box {
+  /* Base size using rem for consistency */
+  font-size: 1.2rem;
+  
+  /* Width scales with viewport */
+  width: 80%;
+  max-width: 800px;
+  
+  /* Height combines minimum height with relative scaling */
+  min-height: 100px;
+  height: 20vh;
+  
+  /* Padding uses em (relative to font size) */
+  padding: 1.5em;
+  
+  /* Colors and styling */
+  background-color: #3498db;
+  color: white;
+  border-radius: 5px;
+  
+  /* Center text vertically and horizontally */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  
+  /* Smooth transition for size changes */
+  transition: all 0.3s ease;
+}
+
+/* Media query example */
+@media (max-width: 600px) {
+  .responsive-box {
+      /* Adjust font size for smaller screens */
+      font-size: 1rem;
+      
+      /* Take up more width on small screens */
+      width: 90%;
+      
+      /* Reduce height on small screens */
+      height: 15vh;
+  }
+}

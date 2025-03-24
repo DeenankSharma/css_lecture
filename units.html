@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Units - Absolute and Relative</title>
+    <link rel="stylesheet" href="units.css">
+</head>
+<body>
+    <header>
+        <h1>CSS Units: Absolute vs Relative</h1>
+        <p>Understanding how different CSS measurement units work</p>
+    </header>
+    
+    <main>
+        <section class="absolute-units">
+            <h2>Absolute Units</h2>
+            <div class="unit-example px-example">This element uses px (pixels)</div>
+            <div class="unit-example pt-example">This element uses pt (points)</div>
+            <div class="unit-example in-example">This element uses in (inches)</div>
+            <div class="unit-example cm-example">This element uses cm (centimeters)</div>
+            <div class="unit-example mm-example">This element uses mm (millimeters)</div>
+        </section>
+
+        <section class="relative-units">
+            <h2>Relative Units</h2>
+            <div class="unit-example em-example">This element uses em (relative to parent)</div>
+            <div class="unit-example rem-example">This element uses rem (relative to root)</div>
+            <div class="unit-example percent-example">This element uses % (percentage)</div>
+            <div class="unit-example vw-example">This element uses vw (viewport width)</div>
+            <div class="unit-example vh-example">This element uses vh (viewport height)</div>
+        </section>
+
+        <section class="nested-examples">
+            <h2>Nested Elements with em Units</h2>
+            <div class="parent">
+                Parent element (font-size: 20px)
+                <div class="child">
+                    Child element (font-size: 1.5em = 30px)
+                    <div class="grandchild">
+                        Grandchild element (font-size: 1.5em = 45px)
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="responsive-demo">
+            <h2>Responsive Design Example</h2>
+            <p>Resize your browser window to see these elements change:</p>
+            <div class="responsive-box">
+                This box uses a mix of relative units
+            </div>
+        </section>
+    </main>
+</body>
+</html>
