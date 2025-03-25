@@ -1,0 +1,53 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.box {
+  background-color: #3498db;
+  color: white;
+  padding: 20px;
+  flex: 1;
+  margin: 10px;
+  text-align: center;
+}
+
+/* Media query for screens 600px or narrower */
+@media screen and (max-width: 600px) {
+  .container {
+      flex-direction: column;
+  }
+  
+  .box {
+      margin: 10px 0;
+  }
+  
+  h1 {
+      font-size: 1.5rem;
+  }
+}
+
+/* Media query for medium-sized screens */
+@media screen and (min-width: 601px) and (max-width: 900px) {
+  .box {
+      background-color: #2ecc71;
+  }
+  
+  h1 {
+      color: #e74c3c;
+  }
+}
+
+/* Media query for larger screens */
+@media screen and (min-width: 901px) {
+  .box {
+      padding: 30px;
+      border-radius: 10px;
+  }
+}
