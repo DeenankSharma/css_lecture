@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Explained</title>
+    <link rel="stylesheet" href="grid.css">
+</head>
+<body>
+    <h1>CSS Grid Layout Example</h1>
+    
+    <h2>Basic Grid (3 columns × 3 rows)</h2>
+    <div class="grid-container">
+        <div class="grid-item item1">Item 1 (spans 2 columns)</div>
+        <div class="grid-item item2">Item 2 (spans 2 rows)</div>
+        <div class="grid-item">Item 3</div>
+        <div class="grid-item">Item 4</div>
+        <div class="grid-item">Item 5</div>
+        <div class="grid-item">Item 6</div>
+        <div class="grid-item">Item 7</div>
+    </div>
+    
+    <h2>Nested Grid</h2>
+    <div class="grid-container nested-container">
+        <div class="grid-item header">Header</div>
+        <div class="grid-item main-content">
+            <div class="nested-grid">
+                <div class="nested-item">Nested 1</div>
+                <div class="nested-item">Nested 2</div>
+                <div class="nested-item">Nested 3</div>
+                <div class="nested-item">Nested 4</div>
+            </div>
+        </div>
+        <div class="grid-item sidebar">Sidebar</div>
+    </div>
+</body>
+</html>
