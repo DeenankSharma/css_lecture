@@ -1,0 +1,59 @@
+/* Main container - uses column direction to stack rows vertically */
+.flex-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between rows */
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: 0 auto;
+  border: 1px solid #e0e0e0;
+}
+
+/* Row container - uses row direction to arrange columns horizontally */
+.flex-row {
+  display: flex;
+  justify-content: space-between; /* Distributes columns evenly */
+  gap: 10px; /* Space between columns */
+  flex-wrap: wrap; /* Allows columns to wrap on smaller screens */
+}
+
+/* Column items - flex-basis sets the initial width */
+.flex-col {
+  flex-basis: calc(33.33% - 20px); /* Each column takes up 1/3 of the row width minus gap */
+  background: linear-gradient(145deg, #5fd665, #3ca040); /* Gradient background */
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* Hover effects for interactive feel */
+.flex-col:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(145deg, #4caf50, #2e8b57);
+  cursor: pointer;
+}
+
+/* Media query for responsive design */
+@media (max-width: 768px) {
+  .flex-col {
+    flex-basis: calc(50% - 10px); /* On medium screens, 2 columns per row */
+  }
+}
+
+@media (max-width: 480px) {
+  .flex-col {
+    flex-basis: 100%; /* On small screens, 1 column per row */
+  }
+}

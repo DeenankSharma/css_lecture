@@ -9,15 +9,15 @@
   color: black;
   background-color: lightgreen;
   position: relative;  
-  /* relative to its normal position if static was used, removed from normal document flow */
+  /* relative to its normal position if static was used, removed from normal document flow but space is not removed */
   left: 10px;
   top: 10px;
 }
 
 .child-two{
   color: black;
-  position: absolute; 
-  top: 0;
+  /* position: absolute;  */
+  /* top: 0; */
    /* also breaks from normal flow but relative to the nearest non static element, generally relative */
    /* fixed is relative to the viewport and does not move with scrolling*/
   background-color: lightcoral;
